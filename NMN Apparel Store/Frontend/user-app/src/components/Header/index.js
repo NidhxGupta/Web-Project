@@ -118,6 +118,10 @@ const Header = (props) => {
                     <Nav className="md-center px-4">
 
                         <NavDropdown title="Men" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="Men/General">
+                                <NavLink to="/Men/General" className="nav-link">General</NavLink>
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
                             <NavDropdown.Item href="Men/Tops">
                                 <NavLink to="/Men/Tops" className="nav-link">Tops</NavLink>
                             </NavDropdown.Item>
@@ -130,7 +134,7 @@ const Header = (props) => {
                                 <NavLink to="/Men/Footwear" className="nav-link">Footwear</NavLink>
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
+                            <NavDropdown.Item href="/Men/Accessories">
                                 <NavLink to="/Men/Accessories" className="nav-link">Accessories</NavLink>
                             </NavDropdown.Item>
                         </NavDropdown>
@@ -138,25 +142,49 @@ const Header = (props) => {
                     <Nav className="md-center px-4">
 
                         <NavDropdown title="Women" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Tops</NavDropdown.Item>
+                            <NavDropdown.Item href="Women/General">
+                                <NavLink to="/Women/General" className="nav-link">General</NavLink>
+                            </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.2">Bottoms</NavDropdown.Item>
+                            <NavDropdown.Item href="Women/Tops">
+                                <NavLink to="/Women/Tops" className="nav-link">Tops</NavLink>
+                            </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.3">Footwear</NavDropdown.Item>
+                            <NavDropdown.Item href="/Women/Bottoms">
+                                <NavLink to="/Women/Bottoms" className="nav-link">Bottoms</NavLink>
+                            </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Accessories</NavDropdown.Item>
+                            <NavDropdown.Item href="/Women/Footwear">
+                                <NavLink to="/Women/Footwear" className="nav-link">Footwear</NavLink>
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="/Women/Accessories">
+                                <NavLink to="/Women/Accessories" className="nav-link">Accessories</NavLink>
+                            </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Nav className="md-center px-4">
 
                         <NavDropdown title="Kids" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Tops</NavDropdown.Item>
+                            <NavDropdown.Item href="/Kids/General">
+                                <NavLink to="/Kids/General" className="nav-link">General</NavLink>
+                            </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.2">Bottoms</NavDropdown.Item>
+                            <NavDropdown.Item href="/Kids/Tops">
+                                <NavLink to="/Kids/Tops" className="nav-link">Tops</NavLink>
+                            </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.3">Footwear</NavDropdown.Item>
+                            <NavDropdown.Item href="/Kids/Bottoms">
+                                <NavLink to="/Kids/Bottoms" className="nav-link">Bottoms</NavLink>
+                            </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Accessories</NavDropdown.Item>
+                            <NavDropdown.Item href="/Kids/Footwear">
+                                <NavLink to="/Kids/Footwear" className="nav-link">Footwear</NavLink>
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="/Kids/Accessories">
+                                <NavLink to="/Kids/Accessories" className="nav-link">Accessories</NavLink>
+                            </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
 
