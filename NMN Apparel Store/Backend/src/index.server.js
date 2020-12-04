@@ -13,7 +13,6 @@ const cors = require('cors');
 //routes
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin/auth');
-const categoryRoutes = require('./routes/category');
 
 // To use the environment variable or initializing
 env.config();
@@ -40,7 +39,7 @@ app.use(bodyParser.urlencoded({
 })); //For using bodyParser to post data
 app.use('/api', authRoutes);
 app.use('/api', adminRoutes);
-app.use('/api', categoryRoutes);
+
 /*
 app.get('/',(req,res,next) => {
     res.status(200).json({

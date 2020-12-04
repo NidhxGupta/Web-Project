@@ -36,7 +36,6 @@
     "slugify": "^1.4.6"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "nodemon": "^2.0.6"
   }
 }
