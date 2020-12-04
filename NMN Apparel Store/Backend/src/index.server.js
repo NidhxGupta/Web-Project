@@ -32,7 +32,7 @@ mongoose.connect(
 });
 
 app.use(cors()); // Will let handle all api requests
-// Adding middlewear to handle data that is posted btw login and logout
+// Adding middleware to pass data to API 
 app.use(express.json());
 app.use(bodyParser.urlencoded({
     extended: true
