@@ -8,7 +8,8 @@ import { NavLink } from "react-router-dom";
 import mensOffer_image from "./images/Men.png";
 import womensOffer_image from "./images/Women.png";
 import kidsOffer_image from "./images/Kids.png";
-import carousel from "./images/Carousel.png"
+import carousel from "./images/Carousel.png";
+import Footer from "../../components/Footer";
 
 /**
  * @author
@@ -120,8 +121,11 @@ const HomePage = (props) => {
                             </Col>
                         </Container>
                     </Row>
+                    <br></br>
+                    <br></br>
                 </Col>
             </Container>
+            <Footer />
         </Layout>
     );
 };

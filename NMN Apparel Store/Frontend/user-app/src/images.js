@@ -15,4 +15,6 @@ export const womensOffer_image = require('./Women.png');
 
 export const kidsOffer_image = require('./Kids.png');
 
+export const Profile_image = require('./Profile_pic.png');
+
 

@@ -5,6 +5,7 @@ import Input from '../../components/UI/Input';
 import { Redirect } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { signup } from '../../actions';
+import Footer from '../../components/Footer';
 
 /**
 * @author
@@ -92,7 +93,10 @@ const Signup = (props) => {
                     </Col>
                 </Row>
 
+                <br></br>
+                <br></br>
             </Container>
+            <Footer />
         </Layout>
     )
 
