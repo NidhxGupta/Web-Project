@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import mensOffer_image from "./images/Men.png";
 import womensOffer_image from "./images/Women.png";
 import kidsOffer_image from "./images/Kids.png";
-import carousel from "./images/Carousel.png"
+import carousel from "./images/Carousel.png";
 
 /**
  * @author
