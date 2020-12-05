@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Nav, Row, Col, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Row, Col, NavDropdown, Container } from 'react-bootstrap';
 import user_icon from './User_icon.png';
 import logo from './Logo.png';
 import { NavLink, Link } from 'react-router-dom';
@@ -23,6 +23,9 @@ const Header = (props) => {
     const renderLoggedInLinks = () => {
         return (
             <Nav>
+                <Container style={{ textAlign: "left" }}>
+                    Admin Dashboard
+                </Container>
                 <li className="nav-item">
                     <span to="/signup" className="nav-link" onClick={logout}>Signout</span>
                 </li>
