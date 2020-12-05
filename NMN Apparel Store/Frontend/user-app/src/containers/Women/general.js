@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import Footer from '../../components/Footer';
 import Layout from '../../components/Layout'
 import banner from "./images/Women.png";
 
@@ -99,9 +100,12 @@ const GWomen = (props) => {
                                 </Col>
                             </Container>
                         </Row>
+                        <br></br>
+                        <br></br>
                     </Col>
                 </Container>
             </Container>
+            <Footer />
         </Layout>
     )
 

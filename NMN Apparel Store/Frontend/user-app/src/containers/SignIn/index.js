@@ -5,6 +5,7 @@ import Input from '../../components/UI/Input';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { login } from '../../actions';
+import Footer from '../../components/Footer';
 
 /**
 * @author
@@ -62,8 +63,10 @@ const Signin = (props) => {
                         </Form>
                     </Col>
                 </Row>
-
+                <br></br>
+                <br></br>
             </Container>
+            <Footer />
         </Layout>
     )
 

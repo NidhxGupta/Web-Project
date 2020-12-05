@@ -38,7 +38,7 @@ const Header = (props) => {
                     />{''}
                 </Nav.Link>
                 <Col md={1}></Col>
-                <Nav.Link href="#deets" className="px-5">
+                <Nav.Link href="/profile" className="px-5">
                     <img
                         alt="logo"
                         src={user_icon}
@@ -50,7 +50,7 @@ const Header = (props) => {
 
 
                 <NavDropdown title="Profile" id="collasible-nav-dropdown" className="pl-3 pr-5">
-                    <NavDropdown.Item href="/profile">Edit Profile</NavDropdown.Item>
+                    <NavDropdown.Item href="/profile" disabled>Edit Profile</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="/signup" onClick={logout}>Signout
                     </NavDropdown.Item>
