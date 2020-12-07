@@ -4,7 +4,7 @@ import { isUserLoggedIn } from "../../actions";
 import Layout from "../../components/Layout";
 import { Carousel, Row } from "react-bootstrap";
 import "./style.css";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import mensOffer_image from "./images/Men.png";
 import womensOffer_image from "./images/Women.png";
 import jockey_men from "./images/Jockey_Men.png"
@@ -19,6 +19,8 @@ import puma_men from "./images/Puma_Jacket.png"
 import kidsOffer_image from "./images/Kids.png";
 import carousel from "./images/Carousel.png";
 import Footer from "../../components/Footer";
+import { useSelector } from 'react-redux';
+import data from './data'
 
 /**
  * @author
@@ -26,6 +28,9 @@ import Footer from "../../components/Footer";
  **/
 
 const HomePage = (props) => {
+    const productList = useSelector((state) => state.productList||{});
+    const {products} = productList;
+   
     return (
         <Layout>
             <Container>
@@ -81,46 +86,80 @@ const HomePage = (props) => {
                             </p>
                         </Container>
                     </Row>
-                    <Row>
-                        <Col>
-                            <Card style={{ width: "18rem" }}>
-                                <Card.Img variant="top" src={jockey_men} />
-                                <Card.Body>
-                                    <Card.Title>Jockey</Card.Title>
-                                    <Card.Text>
-                                        <p>Men's T-Shirt</p>
-                                        <p><b>₹1000</b></p>
-                                    </Card.Text>
-                                    <Button variant="primary">Buy Now</Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col>
-                            <Card style={{ width: "18rem" }}>
-                                <Card.Img variant="top" src={addidas_men} />
-                                <Card.Body>
-                                    <Card.Title>Addidas</Card.Title>
-                                    <Card.Text>
-                                        <p>Men's Running Tracks</p>
-                                        <p><b>₹700</b></p>
-                                    </Card.Text>
-                                    <Button variant="primary">Buy Now</Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col>
-                            <Card style={{ width: "18rem" }}>
-                                <Card.Img variant="top" src={puma_men} />
-                                <Card.Body>
-                                    <Card.Title>Puma</Card.Title>
-                                    <Card.Text>
-                                        <p>Men's Jacket</p>
-                                        <p><b>₹700</b></p>
-                                    </Card.Text>
-                                    <Button variant="primary">Buy Now</Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
+                   <Row>
+                        
+                            <Col>
+                      <ul className="products" >     
+                    {data.products.slice(0,1).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>                 </Col>
+                            <Col>
+                            <ul className="products" >     
+                    {data.products.slice(3,4).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>        
+                            </Col>
+                            <Col>
+                            <ul className="products" >     
+                    {data.products.slice(8,9).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>        
+                            </Col>
+                        
                     </Row>
                     <Row>
                         <Container>
@@ -131,45 +170,80 @@ const HomePage = (props) => {
                         </Container>
                     </Row>
                     <Row>
-                        <Col>
-                            <Card style={{ width: "18rem" }}>
-                                <Card.Img variant="top" src={jockey_tracks} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make
-                                        up the bulk of the card's content.
-                  </Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col>
-                            <Card style={{ width: "18rem" }}>
-                                <Card.Img variant="top" src={soch_saree} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make
-                                        up the bulk of the card's content.
-                                    </Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col>
-                            <Card style={{ width: "18rem" }}>
-                                <Card.Img variant="top" src={fasttrack_watch} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make
-                                        up the bulk of the card's content.
-                                    </Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
+                        
+                            <Col>
+                            <ul className="products" >     
+                    {data.products.slice(6,7).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>        
+                            </Col>
+                            <Col>
+                            <ul className="products" >     
+                    {data.products.slice(13,14).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>        
+                            </Col>
+                            <Col>
+                            <ul className="products" >     
+                    {data.products.slice(14,15).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>        
+                            </Col>
+                        
                     </Row>
                     <Row>
                         <Container>
@@ -180,41 +254,80 @@ const HomePage = (props) => {
                         </Container>
                     </Row>
                     <Row>
-
-                        <Col><Card style={{ width: "18rem" }}>
-                            <Card.Img variant="top" src={kids_winter} />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make
-                                    up the bulk of the card's content.
-                                    </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card></Col>
-                        <Col><Card style={{ width: "18rem" }}>
-                            <Card.Img variant="top" src={kids_jumpsuit} />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make
-                                    up the bulk of the card's content.
-                                    </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card></Col>
-                        <Col><Card style={{ width: "18rem" }}>
-                            <Card.Img variant="top" src={kids_ethnic} />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make
-                                    up the bulk of the card's content.
-                                    </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card></Col>
-
+                        
+                            <Col>
+                            <ul className="products" >     
+                    {data.products.slice(12,13).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>        
+                            </Col>
+                            <Col>
+                            <ul className="products" >     
+                    {data.products.slice(10,11).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>        
+                            </Col>
+                            <Col>
+                            <ul className="products" >     
+                    {data.products.slice(11,12).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>        
+                            </Col>
+                       
                     </Row>
                     <Row><br></br>
                         <br></br></Row>

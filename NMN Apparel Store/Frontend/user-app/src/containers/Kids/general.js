@@ -3,6 +3,8 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Footer from '../../components/Footer';
 import Layout from '../../components/Layout'
 import banner from "./images/Kids.png";
+import data from '../HomePage/data';
+import {NavLink} from 'react-router-dom';
 
 /**
 * @author
@@ -31,17 +33,57 @@ const GKids = (props) => {
                             </Container>
                         </Row>
                         <Row>
-                            <Container fluid>
+                            
                                 <Col>
-                                    {/*Add Kids Top Product Card here*/}
+                                <ul className="products" >     
+                    {data.products.slice(9,10).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>      
                                 </Col>
                                 <Col>
-                                    {/*Add Kids Top Product Card here*/}
+                                <ul className="products" >     
+                    {data.products.slice(10,11).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>      
                                 </Col>
-                                <Col>
-                                    {/*Add Kids Top Product Card here*/}
-                                </Col>
-                            </Container>
+                               
+                            
                         </Row>
                         <Row>
                             <Container>
@@ -50,17 +92,80 @@ const GKids = (props) => {
                             </Container>
                         </Row>
                         <Row>
-                            <Container fluid>
+                            
                                 <Col>
-                                    {/*Add Kids Bottom Card here*/}
+                                <ul className="products" >     
+                    {data.products.slice(17,18).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>      
                                 </Col>
                                 <Col>
-                                    {/*Add Kids Bottom Card here*/}
+                                <ul className="products" >     
+                    {data.products.slice(18,19).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>      
                                 </Col>
                                 <Col>
-                                    {/*Add Kids Bottom Card here*/}
+                                <ul className="products" >     
+                    {data.products.slice(19,20).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>      
                                 </Col>
-                            </Container>
+                            
                         </Row>
                         <Row>
                             <Container>
@@ -69,17 +174,57 @@ const GKids = (props) => {
                             </Container>
                         </Row>
                         <Row>
-                            <Container fluid>
+                           
                                 <Col>
-                                    {/*Add Kids FOOTWEAR Product Card here*/}
+                                <ul className="products" >     
+                    {data.products.slice(20,21).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>      
                                 </Col>
                                 <Col>
-                                    {/*Add Kids FOOTWEAR Product Card here*/}
+                                <ul className="products" >     
+                    {data.products.slice(11,12).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>      
                                 </Col>
-                                <Col>
-                                    {/*Add Kids FOOTWEAR Product Card here*/}
-                                </Col>
-                            </Container>
+                                
+                            
                         </Row>
                         <Row>
                             <Container>
@@ -88,17 +233,80 @@ const GKids = (props) => {
                             </Container>
                         </Row>
                         <Row>
-                            <Container fluid>
+                            
                                 <Col>
-                                    {/*Add Kids ACCESSORIES Card here*/}
+                                <ul className="products" >     
+                    {data.products.slice(12,13).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>      
                                 </Col>
                                 <Col>
-                                    {/*Add Kids ACCESSORIES Card here*/}
+                                <ul className="products" >     
+                    {data.products.slice(15,16).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>      
                                 </Col>
                                 <Col>
-                                    {/*Add Kids ACCESSORIES Card here*/}
+                                <ul className="products" >     
+                    {data.products.slice(16,17).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>      
                                 </Col>
-                            </Container>
+                           
                         </Row>
                         <br></br>
                         <br></br>

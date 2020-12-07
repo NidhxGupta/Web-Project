@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import PrivateRoute from './components/HOC/PrivateRoute';
 import HomePage from './containers/HomePage';
@@ -24,6 +24,7 @@ import KBottoms from './containers/Kids/bottomspage';
 import KFootwear from './containers/Kids/footwearpage';
 import KAccessories from './containers/Kids/accessoriespage';
 import Profile from './containers/Profile/profile';
+import ProductScreen from '../src/containers/ProductScreen';
 
 function App() {
 
@@ -38,11 +39,14 @@ function App() {
   }, []);
 
   return (
+    
     <div className="App">
 
       <Switch>
         {/*Route for Homepage */}
         <Route path="/" exact component={HomePage} />
+        <Route path="/product/:id" component={ProductScreen} />
+        
         {/*Routes for Mens Category */}
         <Route path="/Men/General" exact component={GMen} />
         <Route path="/Men/Tops" exact component={MTops} />
@@ -69,6 +73,7 @@ function App() {
       </Switch>
 
     </div>
+    
   );
 }
 

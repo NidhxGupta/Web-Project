@@ -3,7 +3,8 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Footer from '../../components/Footer';
 import Layout from '../../components/Layout'
 import banner from "./images/Women.png";
-
+import data from '../HomePage/data';
+import {NavLink} from 'react-router-dom';
 /**
 * @author
 * @function GWomen
@@ -31,17 +32,83 @@ const GWomen = (props) => {
                             </Container>
                         </Row>
                         <Row>
-                            <Container fluid>
-                                <Col>
-                                    {/*Add WoMens Top Product Card here*/}
-                                </Col>
-                                <Col>
-                                    {/*Add WoMens Top Product Card here*/}
-                                </Col>
-                                <Col>
-                                    {/*Add WoMens Top Product Card here*/}
-                                </Col>
-                            </Container>
+                            
+                            <Col>
+                        <ul className="products" >     
+                    {data.products.slice(6,7).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>  
+                     
+                        </Col>
+                        <Col>
+                        <ul className="products" >     
+                    {data.products.slice(7,8).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>  
+                     
+                        </Col>
+                        <Col>
+                        <ul className="products" >     
+                    {data.products.slice(25,26).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>  
+                     
+                        </Col>
+                            
                         </Row>
                         <Row>
                             <Container>
@@ -50,17 +117,57 @@ const GWomen = (props) => {
                             </Container>
                         </Row>
                         <Row>
-                            <Container fluid>
-                                <Col>
-                                    {/*Add WoMens Bottom Card here*/}
-                                </Col>
-                                <Col>
-                                    {/*Add WoMens Bottom Card here*/}
-                                </Col>
-                                <Col>
-                                    {/*Add WoMens Bottom Card here*/}
-                                </Col>
-                            </Container>
+                            
+                            <Col>
+                        <ul className="products" >     
+                    {data.products.slice(23,24).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>  
+                        </Col>
+                        <Col>
+                        <ul className="products" >     
+                    {data.products.slice(24,25).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>  
+                        </Col>
+                        
+                            
                         </Row>
                         <Row>
                             <Container>
@@ -69,17 +176,58 @@ const GWomen = (props) => {
                             </Container>
                         </Row>
                         <Row>
-                            <Container fluid>
-                                <Col>
-                                    {/*Add WoMens FOOTWEAR Product Card here*/}
-                                </Col>
-                                <Col>
-                                    {/*Add WoMens FOOTWEAR Product Card here*/}
-                                </Col>
-                                <Col>
-                                    {/*Add WoMens FOOTWEAR Product Card here*/}
-                                </Col>
-                            </Container>
+                           
+                            <Col>
+                        <ul className="products" >     
+                    {data.products.slice(14,15).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>  
+                     
+                        </Col>
+                        <Col>
+                        <ul className="products" >     
+                    {data.products.slice(8,9).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>  
+                     
+                        </Col>
+                            
                         </Row>
                         <Row>
                             <Container>
@@ -88,17 +236,58 @@ const GWomen = (props) => {
                             </Container>
                         </Row>
                         <Row>
-                            <Container fluid>
-                                <Col>
-                                    {/*Add WoMens ACCESSORIES Card here*/}
-                                </Col>
-                                <Col>
-                                    {/*Add WoMens ACCESSORIES Card here*/}
-                                </Col>
-                                <Col>
-                                    {/*Add WoMens ACCESSORIES Card here*/}
-                                </Col>
-                            </Container>
+                            
+                            <Col>
+                        <ul className="products" >     
+                    {data.products.slice(13,14).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>  
+                     
+                        </Col>
+                        <Col>
+                        <ul className="products" >     
+                    {data.products.slice(26,27).map((product) => (
+            <li key={product._id}>
+              <div className="product">
+                <NavLink to={'/product/' + product._id}>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt="product"
+                  />
+                </NavLink>
+                <div className="product-name">
+                  <NavLink to={'/product/' + product._id}>{product.name}</NavLink>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}/-</div>
+               
+              </div>
+            </li>
+      
+          ))}
+           </ul>  
+                     
+                        </Col>
+                            
                         </Row>
                         <br></br>
                         <br></br>
