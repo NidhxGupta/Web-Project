@@ -9,7 +9,7 @@ import Layout from '../../components/Layout'
 const CreateProducts = (props) => {
     return (
         <Layout sidebar>
-
+            <div>Create Products page.<br></br> Coming Soon!!!</div>
         </Layout>
     )
 

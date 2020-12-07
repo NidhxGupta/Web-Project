@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Container, Row, Image, Table, Button } from 'react-bootstrap'
-import { shallowEqual } from 'react-redux';
+import { shallowEqual, useSelector } from 'react-redux';
+import { authConstants } from '../../actions/constants';
 import Footer from '../../components/Footer';
 import Layout from '../../components/Layout'
 import profilepic from "./images/Profile_Pic.png";
@@ -12,6 +13,7 @@ import Shopping_bag from './images/Shopping_bag.png';
 **/
 
 const Profile = (props) => {
+    const auth = useSelector(state => state.auth);
     return (
         <Layout>
             <br></br>
@@ -24,7 +26,7 @@ const Profile = (props) => {
                         </Col>
                         <Col>
                             <Container>
-                                <h2><b>User Name</b></h2>
+                                <h2><b><a className="fullName">{auth.user.fullName}</a></b></h2>
                             </Container>
                             <Container style={{ background: "#000", height: '1px' }}></Container>
                             <Container>

@@ -91,7 +91,7 @@ const Header = (props) => {
     }
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
             <Navbar.Brand href="#home">
                 <Row>
                     <Link to="/" className="navbar-brand">
