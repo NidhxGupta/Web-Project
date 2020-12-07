@@ -28,7 +28,7 @@ const Header = (props) => {
         return (
 
             <Nav>
-                <Nav.Link href="/cart" className="px-5">
+                <Nav.Link href="#deets" className="px-5">
                     <img
                         alt="logo"
                         src={Shopping_bag}

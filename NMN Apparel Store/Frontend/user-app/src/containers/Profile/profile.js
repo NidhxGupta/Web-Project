@@ -85,7 +85,7 @@ const Profile = (props) => {
                                 <tr><td></td></tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>#3265</td>
+                                    <td>#5367</td>
                                     <td>Socks</td>
                                     <td rowSpan="3"><img
                                         alt="product image"
@@ -111,7 +111,7 @@ const Profile = (props) => {
                                 <tr><td></td></tr>
                                 <tr>
                                     <td>3</td>
-                                    <td>#6587</td>
+                                    <td>#8723</td>
                                     <td>Jacket</td>
                                     <td rowSpan="3"><img
                                         alt="product image"

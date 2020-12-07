@@ -24,7 +24,6 @@ import KBottoms from './containers/Kids/bottomspage';
 import KFootwear from './containers/Kids/footwearpage';
 import KAccessories from './containers/Kids/accessoriespage';
 import Profile from './containers/Profile/profile';
-import Cart from './containers/Cart/cart';
 
 function App() {
 
@@ -64,7 +63,6 @@ function App() {
         <Route path="/Kids/Accessories" exact component={KAccessories} />
         {/*Route for Profile */}
         <PrivateRoute path="/Profile" exact component={Profile} />
-        <PrivateRoute Cart="/cart" exact component={Cart} />
         {/*Route for Authenticating the user */}
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
