@@ -5,7 +5,7 @@ import { authConstants } from '../../actions/constants';
 import Footer from '../../components/Footer';
 import Layout from '../../components/Layout'
 import profilepic from "./images/Profile_Pic.png";
-import Shopping_bag from './images/Shopping_bag.png';
+
 
 /**
 * @author
@@ -21,125 +21,28 @@ const Profile = (props) => {
             <Container>
                 <Col>
                     <Row>
-                        <Col>
+                        <Container>
                             <Image src={profilepic} rounded />
-                        </Col>
-                        <Col>
-                            <Container>
-                                <h2><b><a className="fullName">{auth.user.fullName}</a></b></h2>
-                            </Container>
-                            <Container style={{ background: "#000", height: '1px' }}></Container>
-                            <Container>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi est nulla, pharetra id pretium at, elementum eget eros. Nullam a nibh rhoncus, tempor ligula eget, ornare eros. Aliquam ut lacus ipsum. Curabitur sed erat auctor, condimentum justo vitae, sagittis mauris. Phasellus eros eros, mollis eget dignissim sed, euismod vitae est. Quisque lacinia massa quis ultrices gravida. Fusce hendrerit felis id maximus dignissim.
-                            </Container>
-                        </Col>
+                        </Container>
                     </Row>
-                    <br></br>
+                    <Row><br></br></Row>
                     <Row>
-                        <h3><b>Current Orders</b></h3>
+
+                        <Container>
+                            <h2><b><a className="fullName">{auth.user.fullName}</a></b></h2>
+                        </Container>
                         <Container style={{ background: "#000", height: '1px' }}></Container>
-                        <br></br>
-                        All Orders Completed!
+                        <Container>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus egestas efficitur augue ac consectetur. Quisque eget nulla enim. Nunc sollicitudin vulputate nisi in sollicitudin. Proin nec ante facilisis, mollis nibh a, iaculis urna. Vivamus non dapibus leo, at fermentum dui. Morbi lorem elit, semper eu commodo suscipit, ornare vitae dolor. Duis nec nibh in sapien vestibulum suscipit. Duis porttitor ipsum a dolor accumsan eleifend. Vivamus blandit volutpat nunc, feugiat sodales ante volutpat sit amet. Maecenas vestibulum ullamcorper lorem. Duis ultricies urna ut urna vulputate sollicitudin. Proin aliquam maximus elit, at sagittis lorem convallis condimentum.</p>
+
+                            <p>Praesent eu finibus purus, posuere vestibulum augue. Aenean ac aliquet erat. Curabitur sodales sit amet sapien quis vestibulum. Phasellus suscipit aliquet dolor, vel porta eros vulputate ac. Vivamus sed nunc vitae arcu accumsan fermentum in et odio. Suspendisse sollicitudin velit vitae pellentesque consequat. Donec vulputate metus pretium est ullamcorper ornare. Aenean consectetur ut ante eu interdum.</p>
+
+                            <p>Vivamus auctor nisi nisl, vel lobortis velit porta in. Duis eu tellus metus. Phasellus pulvinar convallis nisl pulvinar efficitur. Sed congue maximus felis a sollicitudin. Sed porta tortor eu vestibulum pharetra. Maecenas eu bibendum arcu. Pellentesque molestie, sem ornare placerat ultrices, nunc leo rhoncus quam, quis interdum urna turpis luctus mauris. Nam commodo accumsan neque, gravida feugiat mauris vehicula id. Pellentesque volutpat vestibulum mauris, sollicitudin hendrerit massa congue eget. Nam interdum ultricies sodales. Etiam quis porta ligula. Donec maximus iaculis odio eu accumsan.</p>
+                            <br></br>
+                            <br></br>
+                        </Container>
+
                     </Row>
-                    <br></br>
-                    <Row>
-                        <h3><b>Past Orders</b></h3>
-                        <Container style={{ background: "#000", height: '1px' }}></Container>
-                        <br></br>
-                    </Row>
-                    <Row>
-                        <Table striped bordered hover size="sm">
-                            <thead>
-                                <tr>
-                                    <th>No.</th>
-                                    <th>Order Id</th>
-                                    <th>Product</th>
-                                    <th>Product Image</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>#2985</td>
-                                    <td>Kurta</td>
-                                    <td rowSpan="3"><img
-                                        alt="product image"
-                                        src={Shopping_bag}
-                                        width="104"
-                                        height="60"
-                                        className="d-inline-block align-top"
-                                    />{''}</td>
-                                    <Button variant="link">Return</Button>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <Button variant="link">Reorder</Button>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <Button variant="link">Review Product</Button>
-                                </tr>
-                                <tr><td></td></tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>#5367</td>
-                                    <td>Socks</td>
-                                    <td rowSpan="3"><img
-                                        alt="product image"
-                                        src={Shopping_bag}
-                                        width="104"
-                                        height="60"
-                                        className="d-inline-block align-top"
-                                    />{''}</td>
-                                    <Button variant="link">Return</Button>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <Button variant="link">Reorder</Button>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <Button variant="link">Review Product</Button>
-                                </tr>
-                                <tr><td></td></tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>#8723</td>
-                                    <td>Jacket</td>
-                                    <td rowSpan="3"><img
-                                        alt="product image"
-                                        src={Shopping_bag}
-                                        width="104"
-                                        height="60"
-                                        className="d-inline-block align-top"
-                                    />{''}</td>
-                                    <Button variant="link">Return</Button>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <Button variant="link">Reorder</Button>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <Button variant="link">Review Product</Button>
-                                </tr>
-                            </tbody>
-                        </Table>
-                    </Row>
-                    <br></br>
                     <br></br>
                 </Col>
             </Container>

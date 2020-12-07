@@ -25,6 +25,7 @@ import KFootwear from './containers/Kids/footwearpage';
 import KAccessories from './containers/Kids/accessoriespage';
 import Profile from './containers/Profile/profile';
 import ProductScreen from '../src/containers/ProductScreen';
+import Cart from './containers/Cart/cart';
 
 function App() {
 
@@ -39,14 +40,14 @@ function App() {
   }, []);
 
   return (
-    
+
     <div className="App">
 
       <Switch>
         {/*Route for Homepage */}
         <Route path="/" exact component={HomePage} />
         <Route path="/product/:id" component={ProductScreen} />
-        
+
         {/*Routes for Mens Category */}
         <Route path="/Men/General" exact component={GMen} />
         <Route path="/Men/Tops" exact component={MTops} />
@@ -67,13 +68,14 @@ function App() {
         <Route path="/Kids/Accessories" exact component={KAccessories} />
         {/*Route for Profile */}
         <PrivateRoute path="/Profile" exact component={Profile} />
+        <PrivateRoute path="/Cart" exact component={Cart} />
         {/*Route for Authenticating the user */}
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
       </Switch>
 
     </div>
-    
+
   );
 }
 
