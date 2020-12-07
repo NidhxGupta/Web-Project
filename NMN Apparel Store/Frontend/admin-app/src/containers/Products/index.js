@@ -11,6 +11,7 @@ import Input from '../../components/UI/Input'
 const Products = (props) => {
     return (
         <Layout sidebar>
+            <div>Manage Products page.<br></br> Coming Soon!!!</div>
             {/*
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
